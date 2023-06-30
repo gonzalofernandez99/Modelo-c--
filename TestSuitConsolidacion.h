@@ -2,7 +2,7 @@
 #define TESTSUITCONSOLIDACION_H_
 
 namespace TestSuitConsolidacion{
-	typedef int (*FuncionContarAparicionesSubliminales)(char*, char*);
+	typedef int (*FuncionContarAparicionesSubliminales)(const char*, const char*);
 	void EjecutarPruebasUnitarias(FuncionContarAparicionesSubliminales contar);
 }
 

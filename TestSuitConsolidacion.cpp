@@ -8,56 +8,57 @@ using TestSuitConsolidacion::FuncionContarAparicionesSubliminales;
 void VerificarPruebaUnitaria(int valorObtenido, int valorEsperado, const char * textoPrincipal, const char * textoAEvaluar, const char* nombrePruebaUnitaria);
 
 void TestEjemplo01(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "AB";
-	char *textoPrincipal = "ABA";
+	const char *textoAEvaluar = "AB";
+	const char *textoPrincipal = "ABA";
 	int valorEsperado = 2;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestEjemplo01");
 }
 
+
 void TestEjemplo02(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "AB";
-	char *textoPrincipal = "BAB";
+	const char *textoAEvaluar = "AB";
+	const char *textoPrincipal = "BAB";
 	int valorEsperado = 2;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestEjemplo02");
 }
 
 void TestEjemplo03(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "ABCD";
-	char *textoPrincipal = "ACDBZXCVB";
+	const char *textoAEvaluar = "ABCD";
+	const char *textoPrincipal = "ACDBZXCVB";
 	int valorEsperado = 0;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestEjemplo03");
 }
 
 void TestEjemplo04(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "ABCD";
-	char *textoPrincipal = "ACDBCDA";
+	const char *textoAEvaluar = "ABCD";
+	const char *textoPrincipal = "ACDBCDA";
 	int valorEsperado = 1;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestEjemplo04");
 }
 
 void TestEjemplo05(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "ABCD";
-	char *textoPrincipal = "BCDAZZABCDZCDAB";
+	const char *textoAEvaluar = "ABCD";
+	const char *textoPrincipal = "BCDAZZABCDZCDAB";
 	int valorEsperado = 3;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestEjemplo05");
 }
 
 void TestTextoAEvaluarEsUnCaracter(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "A";
-	char *textoPrincipal = "BCDAZZABCDZCDAB";
+	const char *textoAEvaluar = "A";
+	const char *textoPrincipal = "BCDAZZABCDZCDAB";
 	int valorEsperado = 3;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestTextoAEvaluarEsUnCaracter");
 }
 
 void TestTextoAEvaluarTieneTodasLasRotaciones(FuncionContarAparicionesSubliminales contar){
-	char *textoAEvaluar = "caracas";
-	char *textoPrincipal = "caracaszaracascxracascawacascarqcascarapascaracoscaraca";
+	const char *textoAEvaluar = "caracas";
+	const char *textoPrincipal = "caracaszaracascxracascawacascarqcascarapascaracoscaraca";
 	int valorEsperado = 7;
 	int valorObtenido = contar(textoPrincipal, textoAEvaluar);
 	VerificarPruebaUnitaria(valorObtenido, valorEsperado, textoPrincipal, textoAEvaluar, "TestTextoAEvaluarTieneTodasLasRotaciones");
